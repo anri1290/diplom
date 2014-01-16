@@ -18,7 +18,7 @@ namespace Diplom.Dal
             }
         }
 
-        public IEnumerable<Customer> FindCustomer(string name, DateTime birthDate)
+        public IEnumerable<Customer> FindCustomer(string name, string birthDate)
         {
             using (ISession session = OpenSession())
             {

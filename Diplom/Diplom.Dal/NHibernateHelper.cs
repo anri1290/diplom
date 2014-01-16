@@ -15,7 +15,7 @@ namespace Diplom.Dal
                 {
                     var configuration = new Configuration();
                     configuration.Configure();
-                   // configuration.AddAssembly((Customer).//Assembly);
+                   configuration.AddAssembly(typeof(Customer).Assembly);
                     _sessionFactory = configuration.BuildSessionFactory();
                 }
                 return _sessionFactory;

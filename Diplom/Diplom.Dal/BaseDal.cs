@@ -29,8 +29,8 @@ namespace Diplom.Dal
         {
             _configuration = new Configuration();
             _configuration.DataBaseIntegration(Configure);
-            //_configuration.Configure();
-            //_configuration.AddAssembly(typeof(Customer).Assembly);
+            _configuration.Configure();
+            _configuration.AddAssembly(typeof(Customer).Assembly);
 
             var mapper = new ModelMapper();
             mapper.AddMapping<CustomerMap>();
@@ -77,14 +77,7 @@ namespace Diplom.Dal
         {
             return SessionFactory.OpenSession();
         }
-        public void Update(Customer product)
-        {
-            using (ISession session = NHibernateHelper.OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                session.Update(typeof (Customer));
-                transaction.Commit();
-            }
+       
         }
        
     }

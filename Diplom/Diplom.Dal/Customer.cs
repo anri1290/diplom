@@ -6,6 +6,6 @@ namespace Diplom.Dal
     {
         public virtual Guid RecId { get; set; }
         public virtual string Name { get; set; }
-        public virtual DateTime BirthDate { get; set; }
+        public virtual string BirthDate { get; set; }
     }
 }

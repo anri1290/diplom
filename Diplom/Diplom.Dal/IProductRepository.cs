@@ -9,7 +9,7 @@ namespace Diplom.Dal
         void Add(Customer customer);
         void Update(Customer customer);
         void Remove(Customer customer);
-        Customer GetById(Guid customer);
+        Customer GetByRecId(Guid customerrecid);
         Customer GetByName(string name);
         ICollection<Customer> GetBirthDate(string birthDate);
     }
