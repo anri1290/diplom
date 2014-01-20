@@ -18,7 +18,7 @@ namespace Diplom.Dal
                      new Customer {Name = "Coca Cola", BirthDate = "2017"},
                      new Customer {Name = "Pepsi Cola", BirthDate = "2212"},
                  };
-
+       
         public void Add(Customer customer)
         {
             using (ISession session = NHibernateHelper.OpenSession())

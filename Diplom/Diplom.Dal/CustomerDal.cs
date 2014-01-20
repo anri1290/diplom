@@ -6,6 +6,10 @@ namespace Diplom.Dal
 {
     public class CustomerDal : BaseDal
     {
+        public CustomerDal(MsSqlCeDal dal) : base(dal)
+        {
+        }
+
         public void CreateCustomer(Customer customer)
         {
             using (ISession session = OpenSession())
